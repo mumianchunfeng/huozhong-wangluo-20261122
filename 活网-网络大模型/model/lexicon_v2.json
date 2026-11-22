@@ -1,0 +1,493 @@
+{
+  "_meta": {
+    "schema": "net-lexicon/2.0",
+    "note": "v2：两表拼一张。关系表管给谁/谁受损，域表管规则/依据/补偿。依据=跨域对照实测（跨域-结论.md）。三域实验口径为 18×2+3×3=45；按八域为 18×2+8×3=60。",
+    "relations": 18,
+    "domains": 8,
+    "rel_cells": 36,
+    "dom_cells": 24,
+    "cells": 60
+  },
+  "cells": [
+    {
+      "kind": "rel",
+      "relation": "supply_demand",
+      "relation_zh": "供需",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "supply_demand.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "supply_demand",
+      "relation_zh": "供需",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "supply_demand.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "ownership",
+      "relation_zh": "权属",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "ownership.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "ownership",
+      "relation_zh": "权属",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "ownership.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "compensation",
+      "relation_zh": "补偿",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "compensation.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "compensation",
+      "relation_zh": "补偿",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "compensation.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "priority",
+      "relation_zh": "优先级",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "priority.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "priority",
+      "relation_zh": "优先级",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "priority.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "trust",
+      "relation_zh": "信任",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "trust.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "trust",
+      "relation_zh": "信任",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "trust.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "risk",
+      "relation_zh": "风险",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "risk.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "risk",
+      "relation_zh": "风险",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "risk.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "exclusion",
+      "relation_zh": "排他",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "exclusion.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "exclusion",
+      "relation_zh": "排他",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "exclusion.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "mutual_aid",
+      "relation_zh": "互助",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "mutual_aid.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "mutual_aid",
+      "relation_zh": "互助",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "mutual_aid.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "arbitrage",
+      "relation_zh": "套利",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "arbitrage.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "arbitrage",
+      "relation_zh": "套利",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "arbitrage.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "mortgage",
+      "relation_zh": "抵押",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "mortgage.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "mortgage",
+      "relation_zh": "抵押",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "mortgage.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "transfer",
+      "relation_zh": "流转",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "transfer.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "transfer",
+      "relation_zh": "流转",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "transfer.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "constraint",
+      "relation_zh": "约束",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "constraint.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "constraint",
+      "relation_zh": "约束",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "constraint.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "privilege",
+      "relation_zh": "特权",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "privilege.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "privilege",
+      "relation_zh": "特权",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "privilege.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "harm",
+      "relation_zh": "损害",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "harm.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "harm",
+      "relation_zh": "损害",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "harm.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "benefit",
+      "relation_zh": "收益",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "benefit.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "benefit",
+      "relation_zh": "收益",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "benefit.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "allocation",
+      "relation_zh": "分配",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "allocation.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "allocation",
+      "relation_zh": "分配",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "allocation.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "guarantee",
+      "relation_zh": "担保",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "guarantee.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "guarantee",
+      "relation_zh": "担保",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "guarantee.harm"
+    },
+    {
+      "kind": "rel",
+      "relation": "inheritance",
+      "relation_zh": "继承",
+      "field": "who",
+      "field_zh": "给谁",
+      "id": "inheritance.who"
+    },
+    {
+      "kind": "rel",
+      "relation": "inheritance",
+      "relation_zh": "继承",
+      "field": "harm",
+      "field_zh": "谁受损",
+      "id": "inheritance.harm"
+    },
+    {
+      "kind": "dom",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "field": "rule",
+      "field_zh": "按什么规则",
+      "id": "AR.rule"
+    },
+    {
+      "kind": "dom",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "field": "basis",
+      "field_zh": "依据哪份数据",
+      "id": "AR.basis"
+    },
+    {
+      "kind": "dom",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "field": "comp",
+      "field_zh": "如何补偿",
+      "id": "AR.comp"
+    },
+    {
+      "kind": "dom",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "field": "rule",
+      "field_zh": "按什么规则",
+      "id": "LW.rule"
+    },
+    {
+      "kind": "dom",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "field": "basis",
+      "field_zh": "依据哪份数据",
+      "id": "LW.basis"
+    },
+    {
+      "kind": "dom",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "field": "comp",
+      "field_zh": "如何补偿",
+      "id": "LW.comp"
+    },
+    {
+      "kind": "dom",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "field": "rule",
+      "field_zh": "按什么规则",
+      "id": "SH.rule"
+    },
+    {
+      "kind": "dom",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "field": "basis",
+      "field_zh": "依据哪份数据",
+      "id": "SH.basis"
+    },
+    {
+      "kind": "dom",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "field": "comp",
+      "field_zh": "如何补偿",
+      "id": "SH.comp"
+    },
+    {
+      "kind": "dom",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "field": "rule",
+      "field_zh": "按什么规则",
+      "id": "AV.rule"
+    },
+    {
+      "kind": "dom",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "field": "basis",
+      "field_zh": "依据哪份数据",
+      "id": "AV.basis"
+    },
+    {
+      "kind": "dom",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "field": "comp",
+      "field_zh": "如何补偿",
+      "id": "AV.comp"
+    },
+    {
+      "kind": "dom",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "field": "rule",
+      "field_zh": "按什么规则",
+      "id": "MD.rule"
+    },
+    {
+      "kind": "dom",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "field": "basis",
+      "field_zh": "依据哪份数据",
+      "id": "MD.basis"
+    },
+    {
+      "kind": "dom",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "field": "comp",
+      "field_zh": "如何补偿",
+      "id": "MD.comp"
+    },
+    {
+      "kind": "dom",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "field": "rule",
+      "field_zh": "按什么规则",
+      "id": "FI.rule"
+    },
+    {
+      "kind": "dom",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "field": "basis",
+      "field_zh": "依据哪份数据",
+      "id": "FI.basis"
+    },
+    {
+      "kind": "dom",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "field": "comp",
+      "field_zh": "如何补偿",
+      "id": "FI.comp"
+    },
+    {
+      "kind": "dom",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "field": "rule",
+      "field_zh": "按什么规则",
+      "id": "EN.rule"
+    },
+    {
+      "kind": "dom",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "field": "basis",
+      "field_zh": "依据哪份数据",
+      "id": "EN.basis"
+    },
+    {
+      "kind": "dom",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "field": "comp",
+      "field_zh": "如何补偿",
+      "id": "EN.comp"
+    },
+    {
+      "kind": "dom",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "field": "rule",
+      "field_zh": "按什么规则",
+      "id": "GV.rule"
+    },
+    {
+      "kind": "dom",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "field": "basis",
+      "field_zh": "依据哪份数据",
+      "id": "GV.basis"
+    },
+    {
+      "kind": "dom",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "field": "comp",
+      "field_zh": "如何补偿",
+      "id": "GV.comp"
+    }
+  ]
+}

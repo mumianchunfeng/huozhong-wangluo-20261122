@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "schema": "net-check/3.0-param",
+    "title": "校验器 v3 · 参数化（认字段、查表，不认字面）",
+    "note": "v2 的三条判据绑死在 6 号那件事上（院上村 / 1.4113 / 112.5＋135）。v3 只改 who / harm / rule 三格：判据不再记住数字，而是去事实里取数、去表里查价。basis 与 comp 保持 v2 文本判据（它们换件本来就 5/5 通用）。"
+  },
+  "by_field": {
+    "who": {
+      "kind": "facts",
+      "layer": "关系表",
+      "forbid": ["人民政府", "建设单位", "自然资源局"],
+      "checks": [
+        {"mode": "contains", "fact": "village", "name": "村名"},
+        {"mode": "any_of", "values": ["农户", "村民委员会", "集体经济组织"], "name": "受偿主体落村"}
+      ]
+    },
+    "harm": {
+      "kind": "facts",
+      "layer": "关系表",
+      "forbid": ["无主体受损"],
+      "checks": [
+        {"mode": "extract_eq", "regex": "(\\d+(?:\\.\\d+)?)公顷", "fact": "area", "name": "总面积"},
+        {"mode": "contains", "fact": "land", "name": "地类"},
+        {"mode": "contains", "fact": "village", "name": "村名"},
+        {"mode": "extract_eq_if", "regex": "永久基本农田[^0-9]{0,3}?(\\d+(?:\\.\\d+)?)\\s*公顷", "fact": "perm_area",
+         "when_positive": "perm_area", "name": "永基面积"}
+      ]
+    },
+    "rule": {
+      "kind": "facts",
+      "layer": "域表",
+      "forbid": ["市场评估价", "协商确定", "协商定价"],
+      "checks": [
+        {"mode": "extract_eq_text", "regex": "(Ⅰ|Ⅱ|Ⅲ|Ⅳ)级", "fact": "level", "name": "区片等级"},
+        {"mode": "table_eq", "table": "区片综合地价",
+         "pair_regex": "(Ⅰ|Ⅱ|Ⅲ|Ⅳ)级[^0-9]{0,12}?(\\d+(?:\\.\\d+)?)\\s*万元/公顷",
+         "fact": "price", "name": "区片单价"},
+        {"mode": "table_perm_eq", "table": "区片综合地价", "regex": "永久基本农田[^0-9]{0,6}?(\\d+(?:\\.\\d+)?)\\s*万元",
+         "fact": "perm_price", "when_positive": "perm_area", "name": "永基单价"}
+      ]
+    }
+  },
+  "text_fields": ["basis", "comp"]
+}

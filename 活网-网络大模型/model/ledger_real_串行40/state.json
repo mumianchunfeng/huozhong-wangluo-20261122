@@ -1,0 +1,274 @@
+{
+  "tick": 40,
+  "bad": {
+    "rule": [
+      "按法定区片综合地价，永久基本农田加成至135万元/公顷",
+      "按周边同类地块市场评估价与被征地村协商确定",
+      "按区片综合地价112.5万元/公顷统一计，不区分永久基本农田"
+    ],
+    "who": [
+      "淄博市张店区人民政府",
+      "项目建设单位（交通基础设施业主）"
+    ],
+    "basis": [
+      "鲁自然资规〔2025〕2号（地上附着物和青苗补偿标准）",
+      "张征补公告〔2025〕6号自身即为补偿标准依据"
+    ],
+    "harm": [
+      "失去建设用地1.4113公顷及地上建筑物",
+      "无主体受损，属公益性征收"
+    ],
+    "comp": [
+      "一次性货币补偿158.77万元（全部按112.5万元/公顷计），不再安排社会保障",
+      "由用地单位直接向农户支付190.53万元（全部按135万元/公顷计），不再经村集体分配"
+    ]
+  },
+  "history": [
+    {
+      "tick": 1,
+      "result": "reject",
+      "kinds": [
+        "填错"
+      ],
+      "slots": [
+        "rule"
+      ]
+    },
+    {
+      "tick": 2,
+      "result": "reject",
+      "kinds": [
+        "填错",
+        "填错"
+      ],
+      "slots": [
+        "who",
+        "rule"
+      ]
+    },
+    {
+      "tick": 3,
+      "result": "reject",
+      "kinds": [
+        "填错",
+        "填错",
+        "填错"
+      ],
+      "slots": [
+        "rule",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 4,
+      "result": "reject",
+      "kinds": [
+        "填错"
+      ],
+      "slots": [
+        "who"
+      ]
+    },
+    {
+      "tick": 5,
+      "result": "reject",
+      "kinds": [
+        "填错",
+        "填错",
+        "填错"
+      ],
+      "slots": [
+        "rule",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 6,
+      "result": "reject",
+      "kinds": [
+        "填错",
+        "填错"
+      ],
+      "slots": [
+        "basis",
+        "harm"
+      ]
+    },
+    {
+      "tick": 7,
+      "result": "reject",
+      "kinds": [
+        "填错",
+        "填错",
+        "填错"
+      ],
+      "slots": [
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 8,
+      "result": "reject",
+      "kinds": [
+        "填错",
+        "填错"
+      ],
+      "slots": [
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 9,
+      "result": "reject",
+      "kinds": [
+        "填错",
+        "填错"
+      ],
+      "slots": [
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 10,
+      "result": "pass"
+    },
+    {
+      "tick": 11,
+      "result": "reject",
+      "kinds": [
+        "填错"
+      ],
+      "slots": [
+        "comp"
+      ]
+    },
+    {
+      "tick": 12,
+      "result": "pass"
+    },
+    {
+      "tick": 13,
+      "result": "pass"
+    },
+    {
+      "tick": 14,
+      "result": "reject",
+      "kinds": [
+        "填错"
+      ],
+      "slots": [
+        "comp"
+      ]
+    },
+    {
+      "tick": 15,
+      "result": "pass"
+    },
+    {
+      "tick": 16,
+      "result": "pass"
+    },
+    {
+      "tick": 17,
+      "result": "pass"
+    },
+    {
+      "tick": 18,
+      "result": "pass"
+    },
+    {
+      "tick": 19,
+      "result": "pass"
+    },
+    {
+      "tick": 20,
+      "result": "pass"
+    },
+    {
+      "tick": 21,
+      "result": "pass"
+    },
+    {
+      "tick": 22,
+      "result": "pass"
+    },
+    {
+      "tick": 23,
+      "result": "pass"
+    },
+    {
+      "tick": 24,
+      "result": "pass"
+    },
+    {
+      "tick": 25,
+      "result": "pass"
+    },
+    {
+      "tick": 26,
+      "result": "pass"
+    },
+    {
+      "tick": 27,
+      "result": "pass"
+    },
+    {
+      "tick": 28,
+      "result": "pass"
+    },
+    {
+      "tick": 29,
+      "result": "pass"
+    },
+    {
+      "tick": 30,
+      "result": "pass"
+    },
+    {
+      "tick": 31,
+      "result": "pass"
+    },
+    {
+      "tick": 32,
+      "result": "pass"
+    },
+    {
+      "tick": 33,
+      "result": "pass"
+    },
+    {
+      "tick": 34,
+      "result": "pass"
+    },
+    {
+      "tick": 35,
+      "result": "pass"
+    },
+    {
+      "tick": 36,
+      "result": "pass"
+    },
+    {
+      "tick": 37,
+      "result": "pass"
+    },
+    {
+      "tick": 38,
+      "result": "pass"
+    },
+    {
+      "tick": 39,
+      "result": "pass"
+    },
+    {
+      "tick": 40,
+      "result": "pass"
+    }
+  ]
+}

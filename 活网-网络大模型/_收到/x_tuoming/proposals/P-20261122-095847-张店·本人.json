@@ -1,0 +1,18 @@
+{
+  "type": "amend_proposal",
+  "convention_id": "PU-Swarm-Charter",
+  "base_version": "v9",
+  "from_root": "d995c84f126cd57e8187a5e888fe2830189f773835604ff442d3b5f83c3f75a4",
+  "proposed_by": "张店·本人",
+  "reason": "S18：使第41行『无公示期、无否决入口』的自陈失效；原文与新态不符即解码器带病",
+  "at": "2026-11-22T09:58:47+08:00",
+  "target": {
+    "sha3_256": "35acfb4333f2b81667b5332e1ace441252cd121f400b396764f3ea0562d4a63d",
+    "sha256": "68ca38131ca108f38a9b2afa82858fcd538b3fccf5eded2e3f049d8f8b31387b",
+    "bytes": 13724,
+    "lines": 92
+  },
+  "target_text_sha3": "35acfb4333f2b81667b5332e1ace441252cd121f400b396764f3ea0562d4a63d",
+  "proposal_id": "P-20261122-095847-张店·本人",
+  "proposal_sha3": "b0086af0d5a659eb94edc6696eb9d9946259a3b0cecceb8ed7d5291b2dfc684b"
+}

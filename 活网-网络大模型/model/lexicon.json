@@ -1,0 +1,1019 @@
+{
+  "_meta": {
+    "schema": "net-lexicon/1.0",
+    "note": "占位词表：8 域 × 18 类是笛卡尔积，未筛无效组合。裁剪须留记录（谁裁、裁了哪些、为什么），不得静默删词。",
+    "domains": 8,
+    "relations": 18,
+    "words": 144
+  },
+  "words": [
+    {
+      "id": "AR.supply_demand",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "supply_demand",
+      "relation_zh": "供需"
+    },
+    {
+      "id": "AR.ownership",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "ownership",
+      "relation_zh": "权属"
+    },
+    {
+      "id": "AR.compensation",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "compensation",
+      "relation_zh": "补偿"
+    },
+    {
+      "id": "AR.priority",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "priority",
+      "relation_zh": "优先级"
+    },
+    {
+      "id": "AR.trust",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "trust",
+      "relation_zh": "信任"
+    },
+    {
+      "id": "AR.risk",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "risk",
+      "relation_zh": "风险"
+    },
+    {
+      "id": "AR.exclusion",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "exclusion",
+      "relation_zh": "排他"
+    },
+    {
+      "id": "AR.mutual_aid",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "mutual_aid",
+      "relation_zh": "互助"
+    },
+    {
+      "id": "AR.arbitrage",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "arbitrage",
+      "relation_zh": "套利"
+    },
+    {
+      "id": "AR.mortgage",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "mortgage",
+      "relation_zh": "抵押"
+    },
+    {
+      "id": "AR.transfer",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "transfer",
+      "relation_zh": "流转"
+    },
+    {
+      "id": "AR.constraint",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "constraint",
+      "relation_zh": "约束"
+    },
+    {
+      "id": "AR.privilege",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "privilege",
+      "relation_zh": "特权"
+    },
+    {
+      "id": "AR.harm",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "harm",
+      "relation_zh": "损害"
+    },
+    {
+      "id": "AR.benefit",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "benefit",
+      "relation_zh": "收益"
+    },
+    {
+      "id": "AR.allocation",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "allocation",
+      "relation_zh": "分配"
+    },
+    {
+      "id": "AR.guarantee",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "guarantee",
+      "relation_zh": "担保"
+    },
+    {
+      "id": "AR.inheritance",
+      "domain": "AR",
+      "domain_zh": "建筑",
+      "relation": "inheritance",
+      "relation_zh": "继承"
+    },
+    {
+      "id": "LW.supply_demand",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "supply_demand",
+      "relation_zh": "供需"
+    },
+    {
+      "id": "LW.ownership",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "ownership",
+      "relation_zh": "权属"
+    },
+    {
+      "id": "LW.compensation",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "compensation",
+      "relation_zh": "补偿"
+    },
+    {
+      "id": "LW.priority",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "priority",
+      "relation_zh": "优先级"
+    },
+    {
+      "id": "LW.trust",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "trust",
+      "relation_zh": "信任"
+    },
+    {
+      "id": "LW.risk",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "risk",
+      "relation_zh": "风险"
+    },
+    {
+      "id": "LW.exclusion",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "exclusion",
+      "relation_zh": "排他"
+    },
+    {
+      "id": "LW.mutual_aid",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "mutual_aid",
+      "relation_zh": "互助"
+    },
+    {
+      "id": "LW.arbitrage",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "arbitrage",
+      "relation_zh": "套利"
+    },
+    {
+      "id": "LW.mortgage",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "mortgage",
+      "relation_zh": "抵押"
+    },
+    {
+      "id": "LW.transfer",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "transfer",
+      "relation_zh": "流转"
+    },
+    {
+      "id": "LW.constraint",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "constraint",
+      "relation_zh": "约束"
+    },
+    {
+      "id": "LW.privilege",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "privilege",
+      "relation_zh": "特权"
+    },
+    {
+      "id": "LW.harm",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "harm",
+      "relation_zh": "损害"
+    },
+    {
+      "id": "LW.benefit",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "benefit",
+      "relation_zh": "收益"
+    },
+    {
+      "id": "LW.allocation",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "allocation",
+      "relation_zh": "分配"
+    },
+    {
+      "id": "LW.guarantee",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "guarantee",
+      "relation_zh": "担保"
+    },
+    {
+      "id": "LW.inheritance",
+      "domain": "LW",
+      "domain_zh": "法律",
+      "relation": "inheritance",
+      "relation_zh": "继承"
+    },
+    {
+      "id": "SH.supply_demand",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "supply_demand",
+      "relation_zh": "供需"
+    },
+    {
+      "id": "SH.ownership",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "ownership",
+      "relation_zh": "权属"
+    },
+    {
+      "id": "SH.compensation",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "compensation",
+      "relation_zh": "补偿"
+    },
+    {
+      "id": "SH.priority",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "priority",
+      "relation_zh": "优先级"
+    },
+    {
+      "id": "SH.trust",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "trust",
+      "relation_zh": "信任"
+    },
+    {
+      "id": "SH.risk",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "risk",
+      "relation_zh": "风险"
+    },
+    {
+      "id": "SH.exclusion",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "exclusion",
+      "relation_zh": "排他"
+    },
+    {
+      "id": "SH.mutual_aid",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "mutual_aid",
+      "relation_zh": "互助"
+    },
+    {
+      "id": "SH.arbitrage",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "arbitrage",
+      "relation_zh": "套利"
+    },
+    {
+      "id": "SH.mortgage",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "mortgage",
+      "relation_zh": "抵押"
+    },
+    {
+      "id": "SH.transfer",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "transfer",
+      "relation_zh": "流转"
+    },
+    {
+      "id": "SH.constraint",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "constraint",
+      "relation_zh": "约束"
+    },
+    {
+      "id": "SH.privilege",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "privilege",
+      "relation_zh": "特权"
+    },
+    {
+      "id": "SH.harm",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "harm",
+      "relation_zh": "损害"
+    },
+    {
+      "id": "SH.benefit",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "benefit",
+      "relation_zh": "收益"
+    },
+    {
+      "id": "SH.allocation",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "allocation",
+      "relation_zh": "分配"
+    },
+    {
+      "id": "SH.guarantee",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "guarantee",
+      "relation_zh": "担保"
+    },
+    {
+      "id": "SH.inheritance",
+      "domain": "SH",
+      "domain_zh": "航运",
+      "relation": "inheritance",
+      "relation_zh": "继承"
+    },
+    {
+      "id": "AV.supply_demand",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "supply_demand",
+      "relation_zh": "供需"
+    },
+    {
+      "id": "AV.ownership",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "ownership",
+      "relation_zh": "权属"
+    },
+    {
+      "id": "AV.compensation",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "compensation",
+      "relation_zh": "补偿"
+    },
+    {
+      "id": "AV.priority",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "priority",
+      "relation_zh": "优先级"
+    },
+    {
+      "id": "AV.trust",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "trust",
+      "relation_zh": "信任"
+    },
+    {
+      "id": "AV.risk",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "risk",
+      "relation_zh": "风险"
+    },
+    {
+      "id": "AV.exclusion",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "exclusion",
+      "relation_zh": "排他"
+    },
+    {
+      "id": "AV.mutual_aid",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "mutual_aid",
+      "relation_zh": "互助"
+    },
+    {
+      "id": "AV.arbitrage",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "arbitrage",
+      "relation_zh": "套利"
+    },
+    {
+      "id": "AV.mortgage",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "mortgage",
+      "relation_zh": "抵押"
+    },
+    {
+      "id": "AV.transfer",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "transfer",
+      "relation_zh": "流转"
+    },
+    {
+      "id": "AV.constraint",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "constraint",
+      "relation_zh": "约束"
+    },
+    {
+      "id": "AV.privilege",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "privilege",
+      "relation_zh": "特权"
+    },
+    {
+      "id": "AV.harm",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "harm",
+      "relation_zh": "损害"
+    },
+    {
+      "id": "AV.benefit",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "benefit",
+      "relation_zh": "收益"
+    },
+    {
+      "id": "AV.allocation",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "allocation",
+      "relation_zh": "分配"
+    },
+    {
+      "id": "AV.guarantee",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "guarantee",
+      "relation_zh": "担保"
+    },
+    {
+      "id": "AV.inheritance",
+      "domain": "AV",
+      "domain_zh": "航空",
+      "relation": "inheritance",
+      "relation_zh": "继承"
+    },
+    {
+      "id": "MD.supply_demand",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "supply_demand",
+      "relation_zh": "供需"
+    },
+    {
+      "id": "MD.ownership",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "ownership",
+      "relation_zh": "权属"
+    },
+    {
+      "id": "MD.compensation",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "compensation",
+      "relation_zh": "补偿"
+    },
+    {
+      "id": "MD.priority",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "priority",
+      "relation_zh": "优先级"
+    },
+    {
+      "id": "MD.trust",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "trust",
+      "relation_zh": "信任"
+    },
+    {
+      "id": "MD.risk",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "risk",
+      "relation_zh": "风险"
+    },
+    {
+      "id": "MD.exclusion",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "exclusion",
+      "relation_zh": "排他"
+    },
+    {
+      "id": "MD.mutual_aid",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "mutual_aid",
+      "relation_zh": "互助"
+    },
+    {
+      "id": "MD.arbitrage",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "arbitrage",
+      "relation_zh": "套利"
+    },
+    {
+      "id": "MD.mortgage",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "mortgage",
+      "relation_zh": "抵押"
+    },
+    {
+      "id": "MD.transfer",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "transfer",
+      "relation_zh": "流转"
+    },
+    {
+      "id": "MD.constraint",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "constraint",
+      "relation_zh": "约束"
+    },
+    {
+      "id": "MD.privilege",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "privilege",
+      "relation_zh": "特权"
+    },
+    {
+      "id": "MD.harm",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "harm",
+      "relation_zh": "损害"
+    },
+    {
+      "id": "MD.benefit",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "benefit",
+      "relation_zh": "收益"
+    },
+    {
+      "id": "MD.allocation",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "allocation",
+      "relation_zh": "分配"
+    },
+    {
+      "id": "MD.guarantee",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "guarantee",
+      "relation_zh": "担保"
+    },
+    {
+      "id": "MD.inheritance",
+      "domain": "MD",
+      "domain_zh": "医疗",
+      "relation": "inheritance",
+      "relation_zh": "继承"
+    },
+    {
+      "id": "FI.supply_demand",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "supply_demand",
+      "relation_zh": "供需"
+    },
+    {
+      "id": "FI.ownership",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "ownership",
+      "relation_zh": "权属"
+    },
+    {
+      "id": "FI.compensation",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "compensation",
+      "relation_zh": "补偿"
+    },
+    {
+      "id": "FI.priority",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "priority",
+      "relation_zh": "优先级"
+    },
+    {
+      "id": "FI.trust",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "trust",
+      "relation_zh": "信任"
+    },
+    {
+      "id": "FI.risk",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "risk",
+      "relation_zh": "风险"
+    },
+    {
+      "id": "FI.exclusion",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "exclusion",
+      "relation_zh": "排他"
+    },
+    {
+      "id": "FI.mutual_aid",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "mutual_aid",
+      "relation_zh": "互助"
+    },
+    {
+      "id": "FI.arbitrage",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "arbitrage",
+      "relation_zh": "套利"
+    },
+    {
+      "id": "FI.mortgage",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "mortgage",
+      "relation_zh": "抵押"
+    },
+    {
+      "id": "FI.transfer",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "transfer",
+      "relation_zh": "流转"
+    },
+    {
+      "id": "FI.constraint",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "constraint",
+      "relation_zh": "约束"
+    },
+    {
+      "id": "FI.privilege",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "privilege",
+      "relation_zh": "特权"
+    },
+    {
+      "id": "FI.harm",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "harm",
+      "relation_zh": "损害"
+    },
+    {
+      "id": "FI.benefit",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "benefit",
+      "relation_zh": "收益"
+    },
+    {
+      "id": "FI.allocation",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "allocation",
+      "relation_zh": "分配"
+    },
+    {
+      "id": "FI.guarantee",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "guarantee",
+      "relation_zh": "担保"
+    },
+    {
+      "id": "FI.inheritance",
+      "domain": "FI",
+      "domain_zh": "金融",
+      "relation": "inheritance",
+      "relation_zh": "继承"
+    },
+    {
+      "id": "EN.supply_demand",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "supply_demand",
+      "relation_zh": "供需"
+    },
+    {
+      "id": "EN.ownership",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "ownership",
+      "relation_zh": "权属"
+    },
+    {
+      "id": "EN.compensation",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "compensation",
+      "relation_zh": "补偿"
+    },
+    {
+      "id": "EN.priority",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "priority",
+      "relation_zh": "优先级"
+    },
+    {
+      "id": "EN.trust",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "trust",
+      "relation_zh": "信任"
+    },
+    {
+      "id": "EN.risk",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "risk",
+      "relation_zh": "风险"
+    },
+    {
+      "id": "EN.exclusion",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "exclusion",
+      "relation_zh": "排他"
+    },
+    {
+      "id": "EN.mutual_aid",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "mutual_aid",
+      "relation_zh": "互助"
+    },
+    {
+      "id": "EN.arbitrage",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "arbitrage",
+      "relation_zh": "套利"
+    },
+    {
+      "id": "EN.mortgage",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "mortgage",
+      "relation_zh": "抵押"
+    },
+    {
+      "id": "EN.transfer",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "transfer",
+      "relation_zh": "流转"
+    },
+    {
+      "id": "EN.constraint",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "constraint",
+      "relation_zh": "约束"
+    },
+    {
+      "id": "EN.privilege",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "privilege",
+      "relation_zh": "特权"
+    },
+    {
+      "id": "EN.harm",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "harm",
+      "relation_zh": "损害"
+    },
+    {
+      "id": "EN.benefit",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "benefit",
+      "relation_zh": "收益"
+    },
+    {
+      "id": "EN.allocation",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "allocation",
+      "relation_zh": "分配"
+    },
+    {
+      "id": "EN.guarantee",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "guarantee",
+      "relation_zh": "担保"
+    },
+    {
+      "id": "EN.inheritance",
+      "domain": "EN",
+      "domain_zh": "能源",
+      "relation": "inheritance",
+      "relation_zh": "继承"
+    },
+    {
+      "id": "GV.supply_demand",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "supply_demand",
+      "relation_zh": "供需"
+    },
+    {
+      "id": "GV.ownership",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "ownership",
+      "relation_zh": "权属"
+    },
+    {
+      "id": "GV.compensation",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "compensation",
+      "relation_zh": "补偿"
+    },
+    {
+      "id": "GV.priority",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "priority",
+      "relation_zh": "优先级"
+    },
+    {
+      "id": "GV.trust",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "trust",
+      "relation_zh": "信任"
+    },
+    {
+      "id": "GV.risk",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "risk",
+      "relation_zh": "风险"
+    },
+    {
+      "id": "GV.exclusion",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "exclusion",
+      "relation_zh": "排他"
+    },
+    {
+      "id": "GV.mutual_aid",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "mutual_aid",
+      "relation_zh": "互助"
+    },
+    {
+      "id": "GV.arbitrage",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "arbitrage",
+      "relation_zh": "套利"
+    },
+    {
+      "id": "GV.mortgage",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "mortgage",
+      "relation_zh": "抵押"
+    },
+    {
+      "id": "GV.transfer",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "transfer",
+      "relation_zh": "流转"
+    },
+    {
+      "id": "GV.constraint",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "constraint",
+      "relation_zh": "约束"
+    },
+    {
+      "id": "GV.privilege",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "privilege",
+      "relation_zh": "特权"
+    },
+    {
+      "id": "GV.harm",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "harm",
+      "relation_zh": "损害"
+    },
+    {
+      "id": "GV.benefit",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "benefit",
+      "relation_zh": "收益"
+    },
+    {
+      "id": "GV.allocation",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "allocation",
+      "relation_zh": "分配"
+    },
+    {
+      "id": "GV.guarantee",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "guarantee",
+      "relation_zh": "担保"
+    },
+    {
+      "id": "GV.inheritance",
+      "domain": "GV",
+      "domain_zh": "政务",
+      "relation": "inheritance",
+      "relation_zh": "继承"
+    }
+  ]
+}

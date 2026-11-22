@@ -1,0 +1,18 @@
+{
+  "type": "amend_proposal",
+  "convention_id": "PU-Swarm-Charter",
+  "base_version": "v10",
+  "from_root": "35acfb4333f2b81667b5332e1ace441252cd121f400b396764f3ea0562d4a63d",
+  "proposed_by": "张店·本人",
+  "reason": "v11：收回外部杀死权——名单可自报，冒名一票即可杀提案；改为异议（待核）＋复核决断",
+  "at": "2026-11-22T10:11:38+08:00",
+  "target": {
+    "sha3_256": "1b1b95214a1c1533aca746e490778fbeee129c628747d1a32ec327cba04c95e6",
+    "sha256": "b68eefc2a5260e3ddb31d8f1e4a033e5b3465dd22de500a08d79ad33ebd05e6f",
+    "bytes": 13854,
+    "lines": 92
+  },
+  "target_text_sha3": "1b1b95214a1c1533aca746e490778fbeee129c628747d1a32ec327cba04c95e6",
+  "proposal_id": "P-20261122-101138-张店·本人",
+  "proposal_sha3": "df3f14fca14f6a52c75202c79badf6bc42f2a8600ede75ca8053bdaba40a42d0"
+}

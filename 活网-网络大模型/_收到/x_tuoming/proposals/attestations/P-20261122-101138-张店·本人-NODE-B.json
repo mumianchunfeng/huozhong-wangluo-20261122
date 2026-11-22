@@ -1,0 +1,10 @@
+{
+  "type": "amend_attestation",
+  "proposal_id": "P-20261122-101138-张店·本人",
+  "proposal_sha3": "df3f14fca14f6a52c75202c79badf6bc42f2a8600ede75ca8053bdaba40a42d0",
+  "node": "NODE-B",
+  "decision": "approve",
+  "note": "与 v10 逐行对比：仅第41行变化；基因锁四款逐字一致",
+  "at": "2026-11-22T10:11:38+08:00",
+  "attest_sha3": "cc7dbf4daeb206f445114aae66e4588d809bdf1f80df3b470fbacae656c5280f"
+}

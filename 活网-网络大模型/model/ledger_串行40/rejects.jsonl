@@ -1,0 +1,12 @@
+{"id": "E0001", "at": "2026-11-22T08:46:28+08:00", "domain": "AR", "word": "AR.risk", "missing": ["rule", "harm", "comp"], "missing_zh": ["按什么规则", "谁受损", "如何补偿"]}
+{"id": "E0002", "at": "2026-11-22T08:46:29+08:00", "domain": "AR", "word": "AR.trust", "missing": ["harm", "comp"], "missing_zh": ["谁受损", "如何补偿"]}
+{"id": "E0003", "at": "2026-11-22T08:46:29+08:00", "domain": "AR", "word": "AR.inheritance", "missing": ["comp"], "missing_zh": ["如何补偿"]}
+{"id": "E0011", "at": "2026-11-22T08:46:29+08:00", "domain": "LW", "word": "LW.compensation", "missing": ["rule", "harm", "comp"], "missing_zh": ["按什么规则", "谁受损", "如何补偿"]}
+{"id": "E0012", "at": "2026-11-22T08:46:29+08:00", "domain": "LW", "word": "LW.mortgage", "missing": ["harm", "comp"], "missing_zh": ["谁受损", "如何补偿"]}
+{"id": "E0013", "at": "2026-11-22T08:46:29+08:00", "domain": "LW", "word": "LW.benefit", "missing": ["comp"], "missing_zh": ["如何补偿"]}
+{"id": "E0021", "at": "2026-11-22T08:46:29+08:00", "domain": "SH", "word": "SH.harm", "missing": ["rule", "harm", "comp"], "missing_zh": ["按什么规则", "谁受损", "如何补偿"]}
+{"id": "E0022", "at": "2026-11-22T08:46:29+08:00", "domain": "SH", "word": "SH.harm", "missing": ["harm", "comp"], "missing_zh": ["谁受损", "如何补偿"]}
+{"id": "E0023", "at": "2026-11-22T08:46:29+08:00", "domain": "SH", "word": "SH.trust", "missing": ["comp"], "missing_zh": ["如何补偿"]}
+{"id": "E0031", "at": "2026-11-22T08:46:29+08:00", "domain": "AV", "word": "AV.guarantee", "missing": ["rule", "harm", "comp"], "missing_zh": ["按什么规则", "谁受损", "如何补偿"]}
+{"id": "E0032", "at": "2026-11-22T08:46:29+08:00", "domain": "AV", "word": "AV.privilege", "missing": ["harm", "comp"], "missing_zh": ["谁受损", "如何补偿"]}
+{"id": "E0033", "at": "2026-11-22T08:46:29+08:00", "domain": "AV", "word": "AV.guarantee", "missing": ["comp"], "missing_zh": ["如何补偿"]}

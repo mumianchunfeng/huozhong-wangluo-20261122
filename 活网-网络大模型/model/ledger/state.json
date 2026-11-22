@@ -1,0 +1,259 @@
+{
+  "tick": 40,
+  "domain": "AV",
+  "slots": [
+    "rule",
+    "harm",
+    "comp"
+  ],
+  "history": [
+    {
+      "tick": 1,
+      "domain": "AR",
+      "result": "reject",
+      "missing": [
+        "rule",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 2,
+      "domain": "AR",
+      "result": "reject",
+      "missing": [
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 3,
+      "domain": "AR",
+      "result": "reject",
+      "missing": [
+        "comp"
+      ]
+    },
+    {
+      "tick": 4,
+      "domain": "AR",
+      "result": "pass"
+    },
+    {
+      "tick": 5,
+      "domain": "AR",
+      "result": "pass"
+    },
+    {
+      "tick": 6,
+      "domain": "AR",
+      "result": "pass"
+    },
+    {
+      "tick": 7,
+      "domain": "AR",
+      "result": "pass"
+    },
+    {
+      "tick": 8,
+      "domain": "AR",
+      "result": "pass"
+    },
+    {
+      "tick": 9,
+      "domain": "AR",
+      "result": "pass"
+    },
+    {
+      "tick": 10,
+      "domain": "AR",
+      "result": "pass"
+    },
+    {
+      "tick": 11,
+      "domain": "LW",
+      "result": "reject",
+      "missing": [
+        "rule",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 12,
+      "domain": "LW",
+      "result": "reject",
+      "missing": [
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 13,
+      "domain": "LW",
+      "result": "reject",
+      "missing": [
+        "comp"
+      ]
+    },
+    {
+      "tick": 14,
+      "domain": "LW",
+      "result": "pass"
+    },
+    {
+      "tick": 15,
+      "domain": "LW",
+      "result": "pass"
+    },
+    {
+      "tick": 16,
+      "domain": "LW",
+      "result": "pass"
+    },
+    {
+      "tick": 17,
+      "domain": "LW",
+      "result": "pass"
+    },
+    {
+      "tick": 18,
+      "domain": "LW",
+      "result": "pass"
+    },
+    {
+      "tick": 19,
+      "domain": "LW",
+      "result": "pass"
+    },
+    {
+      "tick": 20,
+      "domain": "LW",
+      "result": "pass"
+    },
+    {
+      "tick": 21,
+      "domain": "SH",
+      "result": "reject",
+      "missing": [
+        "rule",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 22,
+      "domain": "SH",
+      "result": "reject",
+      "missing": [
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 23,
+      "domain": "SH",
+      "result": "reject",
+      "missing": [
+        "comp"
+      ]
+    },
+    {
+      "tick": 24,
+      "domain": "SH",
+      "result": "pass"
+    },
+    {
+      "tick": 25,
+      "domain": "SH",
+      "result": "pass"
+    },
+    {
+      "tick": 26,
+      "domain": "SH",
+      "result": "pass"
+    },
+    {
+      "tick": 27,
+      "domain": "SH",
+      "result": "pass"
+    },
+    {
+      "tick": 28,
+      "domain": "SH",
+      "result": "pass"
+    },
+    {
+      "tick": 29,
+      "domain": "SH",
+      "result": "pass"
+    },
+    {
+      "tick": 30,
+      "domain": "SH",
+      "result": "pass"
+    },
+    {
+      "tick": 31,
+      "domain": "AV",
+      "result": "reject",
+      "missing": [
+        "rule",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 32,
+      "domain": "AV",
+      "result": "reject",
+      "missing": [
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 33,
+      "domain": "AV",
+      "result": "reject",
+      "missing": [
+        "comp"
+      ]
+    },
+    {
+      "tick": 34,
+      "domain": "AV",
+      "result": "pass"
+    },
+    {
+      "tick": 35,
+      "domain": "AV",
+      "result": "pass"
+    },
+    {
+      "tick": 36,
+      "domain": "AV",
+      "result": "pass"
+    },
+    {
+      "tick": 37,
+      "domain": "AV",
+      "result": "pass"
+    },
+    {
+      "tick": 38,
+      "domain": "AV",
+      "result": "pass"
+    },
+    {
+      "tick": 39,
+      "domain": "AV",
+      "result": "pass"
+    },
+    {
+      "tick": 40,
+      "domain": "AV",
+      "result": "pass"
+    }
+  ]
+}

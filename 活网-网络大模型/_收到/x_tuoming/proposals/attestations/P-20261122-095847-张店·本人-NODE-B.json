@@ -1,0 +1,10 @@
+{
+  "type": "amend_attestation",
+  "proposal_id": "P-20261122-095847-张店·本人",
+  "proposal_sha3": "b0086af0d5a659eb94edc6696eb9d9946259a3b0cecceb8ed7d5291b2dfc684b",
+  "node": "NODE-B",
+  "decision": "approve",
+  "note": "draft 与 v9 逐行对比：仅第41行变化，其余一致",
+  "at": "2026-11-22T09:58:54+08:00",
+  "attest_sha3": "395956fd74628cd86d6df82e9ae0b377277e64ef259279196abdc5ac65b3df91"
+}

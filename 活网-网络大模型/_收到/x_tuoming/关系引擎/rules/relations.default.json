@@ -1,0 +1,166 @@
+{
+  "_meta": {
+    "schema": "relation-type-registry/1.0",
+    "note": "占位种子：这 18 个关系码为搭建期用于跑通机制的通用骨架，不代表用户本人的法定关系体系。用户以其自有关系界定替换时，只需改本文件并重跑 init-types，引擎的约束执行逻辑不变。",
+    "constraint_types_supported": [
+      "unique_incoming",
+      "unique_outgoing",
+      "acyclic",
+      "requires"
+    ]
+  },
+  "relations": [
+    {
+      "code": "supply_demand",
+      "zh": "供需",
+      "semantics": "一方提供资源/服务，一方提出需求并承接",
+      "directed": true,
+      "inverse": "demand_supply",
+      "constraints": []
+    },
+    {
+      "code": "ownership",
+      "zh": "权属",
+      "semantics": "标的物归属某主体；共有情形以 weight 记份额",
+      "directed": true,
+      "inverse": "owned_by",
+      "constraints": [
+        { "type": "unique_incoming", "unless_weight": true }
+      ]
+    },
+    {
+      "code": "compensation",
+      "zh": "补偿",
+      "semantics": "因损害而向受损方给付补偿，以恢复平衡",
+      "directed": true,
+      "inverse": "compensated_by",
+      "constraints": [
+        { "type": "requires", "with": "harm", "same_pair": true }
+      ]
+    },
+    {
+      "code": "priority",
+      "zh": "优先级",
+      "semantics": "在同一资源队列中谁先受偿/先调用",
+      "directed": true,
+      "inverse": "posteriority",
+      "constraints": [ { "type": "acyclic" } ]
+    },
+    {
+      "code": "trust",
+      "zh": "信任",
+      "semantics": "节点对另一节点履约能力的置信关系",
+      "directed": true,
+      "inverse": "trusted_by",
+      "constraints": []
+    },
+    {
+      "code": "risk",
+      "zh": "风险",
+      "semantics": "风险由某节点暴露或传导至另一节点",
+      "directed": true,
+      "inverse": "risk_from",
+      "constraints": []
+    },
+    {
+      "code": "exclusion",
+      "zh": "排他",
+      "semantics": "排除他人对某标的的使用资格",
+      "directed": true,
+      "inverse": "excluded_by",
+      "constraints": [
+        { "type": "unique_incoming", "unless_weight": true }
+      ]
+    },
+    {
+      "code": "mutual_aid",
+      "zh": "互助",
+      "semantics": "无对价的相互支撑，不计入收益",
+      "directed": true,
+      "inverse": "mutual_aid",
+      "constraints": []
+    },
+    {
+      "code": "arbitrage",
+      "zh": "套利",
+      "semantics": "利用信息差或价差获取不对等收益，属待勘比的高危关系",
+      "directed": true,
+      "inverse": "arbitraged_by",
+      "constraints": []
+    },
+    {
+      "code": "mortgage",
+      "zh": "抵押",
+      "semantics": "以标的担保债务履行",
+      "directed": true,
+      "inverse": "mortgaged_by",
+      "constraints": [ { "type": "acyclic" } ]
+    },
+    {
+      "code": "transfer",
+      "zh": "流转",
+      "semantics": "资源或权利在主体间转移",
+      "directed": true,
+      "inverse": "transferred_by",
+      "constraints": []
+    },
+    {
+      "code": "constraint",
+      "zh": "约束",
+      "semantics": "对主体行为的限制性要求",
+      "directed": true,
+      "inverse": "constrained_by",
+      "constraints": []
+    },
+    {
+      "code": "privilege",
+      "zh": "特权",
+      "semantics": "超出普通主体基准权益的例外授权，需重点勘比",
+      "directed": true,
+      "inverse": "privileged_by",
+      "constraints": []
+    },
+    {
+      "code": "harm",
+      "zh": "损害",
+      "semantics": "一方权益受另一方行为实质减损",
+      "directed": true,
+      "inverse": "harmed_by",
+      "constraints": []
+    },
+    {
+      "code": "benefit",
+      "zh": "收益",
+      "semantics": "一方因某事项获得增益",
+      "directed": true,
+      "inverse": "benefited_by",
+      "constraints": []
+    },
+    {
+      "code": "allocation",
+      "zh": "分配",
+      "semantics": "资源在某主体处被配置；按份额分配以 weight 记",
+      "directed": true,
+      "inverse": "allocated_to",
+      "constraints": [
+        { "type": "unique_incoming", "unless_weight": true }
+      ]
+    },
+    {
+      "code": "guarantee",
+      "zh": "担保",
+      "semantics": "第三方为债务履行提供保障",
+      "directed": true,
+      "inverse": "guaranteed_by",
+      "constraints": [ { "type": "acyclic" } ]
+    },
+    {
+      "code": "inheritance",
+      "zh": "继承",
+      "semantics": "权利或义务由主体向继受主体传递",
+      "directed": true,
+      "inverse": "inherited_by",
+      "constraints": [ { "type": "acyclic" } ]
+    }
+  ]
+}

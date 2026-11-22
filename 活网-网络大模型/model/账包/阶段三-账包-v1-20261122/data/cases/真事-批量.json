@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "schema": "net-batch/1.0",
+    "title": "批量真事：同区五份征地补偿公告（张征补〔2025〕6 / 9 / 17 / 19 / 35 号）",
+    "note": "同一套 60 格 × 3 批评者，换件跑，看哪格稳、哪格绑死。数字均取自公告原文：单价与面积写在公告里，金额是公告未写、按 面积×单价 算出来的，故标注 auto_amount。",
+    "source": "张店区人民政府《征地补偿安置方案公告》，扫描页 batch_img/"
+  },
+  "cases": [
+    {
+      "id": "ZD06", "no": "6", "village": "院上村", "town": "房镇镇", "level": "Ⅳ",
+      "price": 112.5, "perm_price": 135, "area": 1.4113, "perm_area": 0.1936,
+      "land": "农用地", "land_detail": "耕地0.2432公顷（含永久基本农田0.1936公顷）",
+      "amount": 163.13, "auto_amount": false,
+      "window": ["2025-07-07", "2025-08-05"], "issued": "2025-07-04",
+      "amount_check": 163.12725
+    },
+    {
+      "id": "ZD09", "no": "9", "village": "西吕村", "town": "房镇镇", "level": "Ⅳ",
+      "price": 112.5, "perm_price": 0, "area": 6.6666, "perm_area": 0,
+      "land": "农用地", "land_detail": "耕地0.0042公顷、园地2.4920公顷、林地4.1307公顷、农村道路0.0126公顷、设施农用地0.0271公顷",
+      "amount": 750.00, "auto_amount": true,
+      "window": ["2025-08-29", "2025-09-27"], "issued": "2025-08-28",
+      "amount_check": 749.9925
+    },
+    {
+      "id": "ZD17", "no": "17", "village": "马尚西北村", "town": "马尚街道", "level": "Ⅱ",
+      "price": 135, "perm_price": 0, "area": 2.0582, "perm_area": 0,
+      "land": "农用地", "land_detail": "林地2.0305公顷、其他农用地0.0277公顷",
+      "amount": 277.86, "auto_amount": true,
+      "window": ["2025-09-24", "2025-10-23"], "issued": "2025-09-23",
+      "amount_check": 277.857
+    },
+    {
+      "id": "ZD19", "no": "19", "village": "马尚西北村", "town": "马尚街道", "level": "Ⅱ",
+      "price": 135, "perm_price": 0, "area": 1.0215, "perm_area": 0,
+      "land": "建设用地", "land_detail": "城市1.0215公顷",
+      "amount": 137.90, "auto_amount": true,
+      "window": ["2025-09-24", "2025-10-23"], "issued": "2025-09-23",
+      "amount_check": 137.9025
+    },
+    {
+      "id": "ZD35", "no": "35", "village": "小张村", "town": "房镇镇", "level": "Ⅰ",
+      "price": 180, "perm_price": 0, "area": 0.0735, "perm_area": 0,
+      "land": "农用地", "land_detail": "耕地0.0735公顷（地块1 0.0005＋地块2 0.0730）",
+      "amount": 13.23, "auto_amount": true,
+      "window": ["2025-09-30", "2025-10-29"], "issued": "2025-09-29",
+      "amount_check": 13.23
+    }
+  ],
+  "templates": [
+    {"id": "T1", "cell": "comp", "name": "补偿费由镇（街道）代管",
+     "text": "货币安置：土地补偿费与安置补助费约{amount}万元，由{town}人民政府代管后统筹使用；并参加被征地农民养老保险（鲁人社规〔2023〕3号）",
+     "vetoed_by": ["C1"], "why_applies": "每件都有村委会，均适用"},
+    {"id": "T2", "cell": "comp", "name": "永久基本农田不落图",
+     "text": "货币安置：约{amount}万元拨付{village}村民委员会账户；并参加被征地农民养老保险（永久基本农田{perm_area}公顷暂不落图）",
+     "vetoed_by": ["C1", "C2"], "why_applies": "只有含永基的件才适用（触发条件 perm_area>0）"},
+    {"id": "T3", "cell": "comp", "name": "社保另案、不随方案落实",
+     "text": "货币安置：约{amount}万元拨付{village}村民委员会账户；被征地农民养老保险另案办理、不随本方案落实",
+     "vetoed_by": ["C2"], "why_applies": "每件都有社保条款，均适用"}
+  ]
+}

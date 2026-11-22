@@ -1,0 +1,10 @@
+{
+  "type": "amend_attestation",
+  "proposal_id": "P-20261122-095847-张店·本人",
+  "proposal_sha3": "b0086af0d5a659eb94edc6696eb9d9946259a3b0cecceb8ed7d5291b2dfc684b",
+  "node": "NODE-A",
+  "decision": "approve",
+  "note": "commit 已加公示放行校验且 fail-closed；基因锁四款未动",
+  "at": "2026-11-22T09:58:54+08:00",
+  "attest_sha3": "96af8de6da944b06ceca2d6a9f642dc8e14f23781c191db1ca3f52afcab809e2"
+}

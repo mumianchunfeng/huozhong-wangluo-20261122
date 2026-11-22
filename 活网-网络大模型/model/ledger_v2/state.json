@@ -1,0 +1,596 @@
+{
+  "tick": 30,
+  "rel": {
+    "ownership": {
+      "who": "院上村集体土地所有权人、使用权人（院上村村民委员会及被征地农户）",
+      "harm": "院上村失去农用地1.4113公顷（含耕地0.2432公顷、永久基本农田0.1936公顷）及地上附着物"
+    },
+    "compensation": {
+      "who": "院上村集体土地所有权人、使用权人（院上村村民委员会及被征地农户）",
+      "harm": "院上村失去农用地1.4113公顷（含耕地0.2432公顷、永久基本农田0.1936公顷）及地上附着物"
+    },
+    "harm": {
+      "who": "院上村集体土地所有权人、使用权人（院上村村民委员会及被征地农户）",
+      "harm": "院上村失去农用地1.4113公顷（含耕地0.2432公顷、永久基本农田0.1936公顷）及地上附着物"
+    },
+    "allocation": {
+      "who": "院上村集体土地所有权人、使用权人（院上村村民委员会及被征地农户）",
+      "harm": "院上村失去农用地1.4113公顷（含耕地0.2432公顷、永久基本农田0.1936公顷）及地上附着物"
+    }
+  },
+  "dom": {
+    "LW": {
+      "rule": "按Ⅳ级区片112.5万元/公顷、永久基本农田135万元/公顷的区片综合地价计",
+      "basis": "鲁政字〔2023〕144号（山东省征地区片综合地价批复）",
+      "comp": "货币安置（土地补偿费与安置补助费约163.13万元，拨付村委会账户）＋被征地农民养老保险（鲁人社规〔2023〕3号）"
+    },
+    "GV": {
+      "rule": "公告期为30日（2025-07-07至2025-08-05），期内权利人可申请听证，确需调整的修改后再公布",
+      "basis": "张征补公告〔2025〕6号及《土地管理法》第四十五条征收目的",
+      "comp": "公告期内持不动产权属证明办理补偿登记，无异议者一并签订征地补偿安置协议"
+    },
+    "FI": {
+      "rule": "土地补偿费与安置补助费按专户拨付、专款专用、不得挪用",
+      "basis": "拨付院上村村民委员会账户，具体分配方案由本村集体经济组织成员讨论决定",
+      "comp": "约163.13万元（(1.4113−0.1936)×112.5＋0.1936×135）"
+    }
+  },
+  "history": [
+    {
+      "tick": 1,
+      "block": 0,
+      "domain": "LW",
+      "relation": "ownership",
+      "switched": false,
+      "result": "reject",
+      "writes": {
+        "rel": 2,
+        "dom": 3
+      },
+      "pass_fields": []
+    },
+    {
+      "tick": 2,
+      "block": 0,
+      "domain": "LW",
+      "relation": "compensation",
+      "switched": false,
+      "result": "reject",
+      "writes": {
+        "rel": 2,
+        "dom": 0
+      },
+      "pass_fields": [
+        "rule",
+        "basis",
+        "comp"
+      ]
+    },
+    {
+      "tick": 3,
+      "block": 0,
+      "domain": "LW",
+      "relation": "harm",
+      "switched": false,
+      "result": "reject",
+      "writes": {
+        "rel": 2,
+        "dom": 0
+      },
+      "pass_fields": [
+        "rule",
+        "basis",
+        "comp"
+      ]
+    },
+    {
+      "tick": 4,
+      "block": 0,
+      "domain": "LW",
+      "relation": "allocation",
+      "switched": false,
+      "result": "reject",
+      "writes": {
+        "rel": 2,
+        "dom": 0
+      },
+      "pass_fields": [
+        "rule",
+        "basis",
+        "comp"
+      ]
+    },
+    {
+      "tick": 5,
+      "block": 0,
+      "domain": "LW",
+      "relation": "ownership",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 6,
+      "block": 0,
+      "domain": "LW",
+      "relation": "compensation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 7,
+      "block": 0,
+      "domain": "LW",
+      "relation": "harm",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 8,
+      "block": 0,
+      "domain": "LW",
+      "relation": "allocation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 9,
+      "block": 0,
+      "domain": "LW",
+      "relation": "ownership",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 10,
+      "block": 0,
+      "domain": "LW",
+      "relation": "compensation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 11,
+      "block": 1,
+      "domain": "GV",
+      "relation": "harm",
+      "switched": true,
+      "result": "reject",
+      "writes": {
+        "rel": 0,
+        "dom": 3
+      },
+      "pass_fields": [
+        "who",
+        "harm"
+      ]
+    },
+    {
+      "tick": 12,
+      "block": 1,
+      "domain": "GV",
+      "relation": "allocation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 13,
+      "block": 1,
+      "domain": "GV",
+      "relation": "ownership",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 14,
+      "block": 1,
+      "domain": "GV",
+      "relation": "compensation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 15,
+      "block": 1,
+      "domain": "GV",
+      "relation": "harm",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 16,
+      "block": 1,
+      "domain": "GV",
+      "relation": "allocation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 17,
+      "block": 1,
+      "domain": "GV",
+      "relation": "ownership",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 18,
+      "block": 1,
+      "domain": "GV",
+      "relation": "compensation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 19,
+      "block": 1,
+      "domain": "GV",
+      "relation": "harm",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 20,
+      "block": 1,
+      "domain": "GV",
+      "relation": "allocation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 21,
+      "block": 2,
+      "domain": "FI",
+      "relation": "ownership",
+      "switched": true,
+      "result": "reject",
+      "writes": {
+        "rel": 0,
+        "dom": 3
+      },
+      "pass_fields": [
+        "who",
+        "harm"
+      ]
+    },
+    {
+      "tick": 22,
+      "block": 2,
+      "domain": "FI",
+      "relation": "compensation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 23,
+      "block": 2,
+      "domain": "FI",
+      "relation": "harm",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 24,
+      "block": 2,
+      "domain": "FI",
+      "relation": "allocation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 25,
+      "block": 2,
+      "domain": "FI",
+      "relation": "ownership",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 26,
+      "block": 2,
+      "domain": "FI",
+      "relation": "compensation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 27,
+      "block": 2,
+      "domain": "FI",
+      "relation": "harm",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 28,
+      "block": 2,
+      "domain": "FI",
+      "relation": "allocation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 29,
+      "block": 2,
+      "domain": "FI",
+      "relation": "ownership",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    },
+    {
+      "tick": 30,
+      "block": 2,
+      "domain": "FI",
+      "relation": "compensation",
+      "switched": false,
+      "result": "pass",
+      "writes": {
+        "rel": 0,
+        "dom": 0
+      },
+      "pass_fields": [
+        "who",
+        "rule",
+        "basis",
+        "harm",
+        "comp"
+      ]
+    }
+  ],
+  "writes": {
+    "开关1": 3,
+    "开关2": 3
+  }
+}

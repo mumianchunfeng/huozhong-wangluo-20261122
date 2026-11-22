@@ -1,0 +1,159 @@
+{
+  "pkg": "阶段三-账包-v1-20261122",
+  "exported_at": "2026-11-22T10:46+08:00",
+  "convention": {
+    "version": "v11",
+    "root_sha3": "1b1b95214a1c1533aca746e490778fbeee129c628747d1a32ec327cba04c95e6",
+    "bytes": 13854,
+    "lines": 92,
+    "at": "2026-11-22T10:11:43+08:00"
+  },
+  "files": [
+    {
+      "path": "ledger_public/events.jsonl",
+      "bytes": 1636,
+      "lines": 2,
+      "sha256": "b99420f5f91e06052bae6af409248927589506400ad4d6f0569f0e9bd6e11793"
+    },
+    {
+      "path": "ledger_public/pending.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ledger_public/vetoes.jsonl",
+      "bytes": 299,
+      "lines": 1,
+      "sha256": "a792b929daa5a2bb7e6e2a441adc519bbab74a40dd85cc60c0b45a5271b26d6c"
+    },
+    {
+      "path": "ledger_public/state.json",
+      "bytes": 5004,
+      "lines": null,
+      "sha256": "7b9f006684b122ff6fafc9753aaf864d2d41937bcc9d9785ad6c4bfa4d0c31e5"
+    },
+    {
+      "path": "外部账/external_log.jsonl",
+      "bytes": 1297,
+      "lines": 4,
+      "sha256": "c336387eb7358289eab575e6e012b7c355c87c047c5cafb062e987c843df8c76"
+    },
+    {
+      "path": "外部账/复核账.jsonl",
+      "bytes": 457,
+      "lines": 2,
+      "sha256": "c75dc8156bc58a1002c754edb3c30cdf8627d6f5bb12a384a1c76c16d486c4d6"
+    },
+    {
+      "path": "外部账/state.json",
+      "bytes": 5965,
+      "lines": null,
+      "sha256": "f4525992deed7f0c34d9a48a961944a4008a84b5101eca385df04a9fe0ca5e3d"
+    },
+    {
+      "path": "ledger_real/events.jsonl",
+      "bytes": 24903,
+      "lines": 35,
+      "sha256": "87e7aa1274e5a81c426c9981f0bf24f19b5c45fbccb7ebe035cdbac1c1202204"
+    },
+    {
+      "path": "ledger_real/rejects.jsonl",
+      "bytes": 3306,
+      "lines": 5,
+      "sha256": "f0e99547016f1698631d3f39a4a590479aa82dc40ccc560f7ed00a989eede107"
+    },
+    {
+      "path": "ledger_real/state.json",
+      "bytes": 3985,
+      "lines": null,
+      "sha256": "0c696898f84c0c0f68354740a3819fd2958ea9e32347145de60b67d290a3ac70"
+    },
+    {
+      "path": "cases/真事-批量9.json",
+      "bytes": 6211,
+      "lines": null,
+      "sha256": "13ff2320290cf8bbd00dde889db68a4e875472b690b6a2f88f018c5b904bca8f"
+    },
+    {
+      "path": "cases/真事-批量.json",
+      "bytes": 3719,
+      "lines": null,
+      "sha256": "5dbeac3255feb177d08952ffba8eddf8f72de55755c5c70f12fce32ccd22d903"
+    },
+    {
+      "path": "cases/批评者.json",
+      "bytes": 2806,
+      "lines": null,
+      "sha256": "9bde4dceb208ddb07fa8977c38b2342daf4a40a1799768b9ff0ca98ae691215d"
+    },
+    {
+      "path": "checks/校验器-v3-参数化.json",
+      "bytes": 2099,
+      "lines": null,
+      "sha256": "4e8960cda67f0a289acc9f8ddbe9087837b4600ac471a9498e83e0d468dac87b"
+    },
+    {
+      "path": "checks/校验器-v2-关系表.json",
+      "bytes": 2800,
+      "lines": null,
+      "sha256": "15033c7ae8b090a70f715551849a1c6136700c08416723cd5c6010afbd245357"
+    },
+    {
+      "path": "checks/校验器-v2-域表.json",
+      "bytes": 2264,
+      "lines": null,
+      "sha256": "aab149e003d6fbf803f24d90e425acd486a1f53201b784d4b16bfc11d335f3f8"
+    },
+    {
+      "path": "checks/校验器-v2-跨表.json",
+      "bytes": 1765,
+      "lines": null,
+      "sha256": "4cd6f077ae2385103a85fb9c70ac330ed79cfe7a2d75288eec1d198ee3166f1a"
+    },
+    {
+      "path": "tables/区片综合地价.json",
+      "bytes": 992,
+      "lines": null,
+      "sha256": "99a1804a5de3e0a689c08514ac22592054d3e68adddfa3a0303ee9f120e37e5e"
+    },
+    {
+      "path": "draft_v11.md",
+      "bytes": 13854,
+      "lines": null,
+      "sha256": "b68eefc2a5260e3ddb31d8f1e4a033e5b3465dd22de500a08d79ad33ebd05e6f"
+    },
+    {
+      "path": "规模-结论.md",
+      "bytes": 4163,
+      "lines": null,
+      "sha256": "2d67b1ddee18fa52c30fb3fbdc7e8bea71bc4ce39958bb7beb7e1bae07e5e962"
+    },
+    {
+      "path": "校验器-v2-结论.md",
+      "bytes": 3442,
+      "lines": null,
+      "sha256": "97cac29ed443c1d1fe54227fcde03fe6ddb265e613c3e270185d081c69e6fafc"
+    },
+    {
+      "path": "外部账/public_view/P-20261122-101138-张店·本人.json",
+      "bytes": 1442,
+      "lines": null,
+      "sha256": "4db1929866aa728f5bbc2f96b23f00dff0b5b0fd5aceb80523650675f9ca2ad6"
+    },
+    {
+      "path": "外部账/public_view/V1.json",
+      "bytes": 1941,
+      "lines": null,
+      "sha256": "666688e505bb68ecee1b80a9e92c898a50e64725985e1c16d46db3670a074cd9"
+    },
+    {
+      "path": "外部账/public_view/V2.json",
+      "bytes": 1716,
+      "lines": null,
+      "sha256": "7fc407ce8a90cc33097b7e3abf95fc6225c488f74daeb835b16e54d1b212756c"
+    }
+  ],
+  "total_sha256": "30a911859afa5d5d8d0558aabbf87b980ad8d8652d3238e87ce62126fddb145d",
+  "how_to_verify": "python verify.py（纯 stdlib，不读脚本、不联网）"
+}
