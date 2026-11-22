@@ -233,6 +233,10 @@ def cmd_absorb():
 
 
 def cmd_status():
+    cfg = jread(CFG) or {}
+    if not cfg.get("repo"):
+        print("未配置信箱、尚未发现节点（先跑 init --repo <信箱>）")
+        return 0
     brs = branches_local()
     n = node() or {}
     fed = os.path.join(TEN, "联邦账.jsonl")

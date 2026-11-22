@@ -54,23 +54,31 @@ def load_cases():
 #    真实 BPE 合并字节对；这里合并"事件标签对"，合并规则落账可复算。
 # ================================================================
 def bpe_train(tokens, target_size):
-    """tokens: list[str]。返回 (merges, vocab)。合并最高频相邻对，直到达标。"""
+    """tokens: list[str]。返回 (merges, vocab)。
+    修：target_size 是上限不是硬指标——没有达标的合法合并就停，不硬凑，
+    否则会反复合并自己的产物，长出 '农用地+Ⅱ+农用地+Ⅱ' 这种无意义串。
+    合并产物打 '合成' 标记，下一轮不再参与合并（真实 BPE 的增量式约束）。"""
     vocab = list(dict.fromkeys(tokens))
     merges = []
     while len(vocab) < target_size:
         pairs = Counter(zip(tokens, tokens[1:]))
+        # 只统计两个原始 token（不含上一轮合成产物），杜绝自我吞并
+        pairs = Counter({p: c for p, c in pairs.items()
+                         if not (p[0].startswith("‹") or p[1].startswith("‹"))})
         if not pairs:
             break
         pair, cnt = pairs.most_common(1)[0]
-        if cnt < 2:
+        if cnt < 2:          # 频率门槛：只合并反复出现的对，单次不合并
             break
-        new = pair[0] + "+" + pair[1]
+        new = "‹" + pair[0].lstrip("‹") + "+" + pair[1].lstrip("‹") + "›"
         merged, i = [], 0
         while i < len(tokens):
             if i + 1 < len(tokens) and tokens[i] == pair[0] and tokens[i + 1] == pair[1]:
                 merged.append(new); i += 2
             else:
                 merged.append(tokens[i]); i += 1
+        if merged == tokens:  # 防御：没发生实际合并就停，避免死循环
+            break
         tokens = merged
         vocab = list(dict.fromkeys(tokens))
         merges.append({"pair": list(pair), "new": new, "count": cnt})
@@ -111,6 +119,24 @@ def qk(q, k):
     return len(a & b) / len(a | b)
 
 
+# 字段权重：真实 attention 各维度贡献不同；关键字段(级别/地类)区分度更高。
+# 修：把整串 literal 拼合改为逐字段加权，避免相似案件 QK 全打平都 0.333。
+FIELD_W = {"level": 0.35, "land": 0.35, "village": 0.15, "amount": 0.10, "area": 0.05}
+
+
+def qk_case(a, b):
+    """逐字段 Jaccard 加权求和；同字段才比，不会把 village 的字误算进 level。"""
+    total = 0.0
+    for f, w in FIELD_W.items():
+        av, bv = str(a.get(f, "")), str(b.get(f, ""))
+        if not av or not bv:
+            continue
+        sa, sb = set(av), set(bv)
+        sim = len(sa & sb) / len(sa | sb) if (sa or sb) else 0.0
+        total += w * sim
+    return total
+
+
 def cmd_attend(case_id):
     print("=" * 64)
     print("② 相关取证 · Self-Attention 原理（QK 相关加权取先例）")
@@ -125,10 +151,8 @@ def cmd_attend(case_id):
     for c in cases:
         if c.get("id") == case_id:
             continue
-        # Q=目标件五字段串，K=候选件五字段串，V=候选件的金额/面积
-        q = " ".join(str(target.get(f, "")) for f in FIVE)
-        k = " ".join(str(c.get(f, "")) for f in FIVE)
-        scores.append((qk(q, k), c))
+        # Q=目标件字段向量，K=候选件字段向量，V=候选件的金额/面积（字段级加权相关）
+        scores.append((qk_case(target, c), c))
     scores.sort(key=lambda x: x[0], reverse=True)
     top = scores[:3]
     if not top or top[0][0] == 0:
@@ -159,18 +183,24 @@ def cmd_route(kind):
     print("=" * 64)
     print("③ 专家路由 · MoE 原理（top-k gating + 负载均衡）")
     print("=" * 64)
+    # gate 用连续相关度：标签字符串与任务形状的字符重合率，不再只数命中个数，
+    # 否则多标签专家必然刷屏、其余专家全 0 → 单专家 100% 塌缩。
     scores = []
+    kset = set(str(kind))
     for name, desc, tags in EXPERTS:
-        s = sum(1 for t in tags if t in kind)
+        hit = sum(1 for t in tags if t in str(kind))
+        # 基础分=命中标签数；附加=标签字符集与任务的 Jaccard，给出连续区分度
+        tag_chars = set("".join(tags))
+        jac = len(tag_chars & kset) / len(tag_chars | kset) if (tag_chars or kset) else 0.0
+        s = hit + jac
         scores.append((float(s), name, desc))
     scores.sort(reverse=True)
-    topk = [x for x in scores if x[0] > 0][:2]
-    if not topk:
-        topk = [(0.0, scores[0][1], scores[0][2])]   # 无命中也给出一个，不空转
+    # top-k 固定取前二（次优也保留），打破单一专家独占；无命中也按分数取前二
+    topk = scores[:2]
     denom = sum(x[0] for x in topk) or 1.0
     print(f"  任务形状：{kind}")
     for s, name, desc in topk:
-        print(f"    → {name}（{desc}）｜gate {s}/{denom}")
+        print(f"    → {name}（{desc}）｜gate {s:.3f}/{denom:.3f}")
     os.makedirs(WING, exist_ok=True)
     lp = os.path.join(WING, "负载.jsonl")
     with open(lp, "a", encoding="utf-8") as f:
@@ -198,8 +228,10 @@ def cmd_selfcheck():
     ok = True
     # BPE
     m, v = bpe_train(["a", "b", "a", "b", "a", "b"], 5)
-    b1 = len(m) > 0 and "a+b" in v
-    print(f"  {'过' if b1 else '失败'}  BPE 合并：{len(m)} 次，词表 {v}")
+    # 新约束：产物带 ‹› 标记、不硬凑目标、无自我拼接（产物最多一个 +）
+    b1 = (len(m) > 0 and any(w.startswith("‹") and w.endswith("›") for w in v)
+          and all(w.count("+") <= 1 for w in v))
+    print(f"  {'过' if b1 else '失败'}  BPE 合并：{len(m)} 次，词表 {v}（无自我拼接）")
     ok &= b1
     # Attention
     s = qk("abc", "abd")
@@ -207,10 +239,16 @@ def cmd_selfcheck():
     print(f"  {'过' if b2 else '失败'}  QK 相关：abc vs abd = {s:.3f}（应 0<s<1）")
     ok &= b2
     # MoE
-    sc = sorted(((float(sum(1 for t in tags if t in "征地 校验")), n)
-                 for n, _, tags in EXPERTS), reverse=True)
-    b3 = sc[0][1] == "checker_v2"
-    print(f"  {'过' if b3 else '失败'}  MoE 路由：征地+校验 → top1 {sc[0][1]}")
+    kset = set("征地 校验")
+    sc = []
+    for n, _, tags in EXPERTS:
+        hit = sum(1 for t in tags if t in "征地 校验")
+        tc = set("".join(tags))
+        jac = len(tc & kset) / len(tc | kset) if (tc or kset) else 0.0
+        sc.append((hit + jac, n))
+    sc.sort(reverse=True)
+    b3 = sc[0][1] == "checker_v2" and len(sc[:2]) == 2   # top1 正确且保留次优防塌缩
+    print(f"  {'过' if b3 else '失败'}  MoE 路由：征地+校验 → top1 {sc[0][1]}（top-2 防塌缩）")
     ok &= b3
     print(f"\n自检：{'通过' if ok else '失败'}（3/3｜{'3' if ok else str(sum([b1,b2,b3]))}/3）")
     return 0 if ok else 1

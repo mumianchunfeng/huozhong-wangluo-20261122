@@ -347,6 +347,10 @@ def cmd_consensus():
 
 
 def cmd_status():
+    cfg = jread(CFG)
+    if not cfg or not cfg.get("repo"):
+        print("未配置信箱、尚未合成（先跑 init --repo <信箱>）")
+        return 0
     r = jread(LEDGER)
     brs = branches()
     print(f"信箱成长分支：{len(brs)}｜" + (", ".join(b.split('/')[1][:8] for b in brs) or "无"))

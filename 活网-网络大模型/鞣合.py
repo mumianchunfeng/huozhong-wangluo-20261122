@@ -77,7 +77,8 @@ def boundary_lock():
     lock = {
         "事实源": "案件材料 / 法条库 / 用户指令（外部输入源，锁定）",
         "规则源": "火种本源规约 " + tail["version"] + " · root " + tail["root_sha3"][:16],
-        "排除项": list((g.get("gene_lock") or {}).get("policy", "")),
+        "排除项": [c.get("prefix", "") for c in (g.get("gene_lock") or {}).get("clauses", []) if c.get("prefix")],
+        "排除项依据": (g.get("gene_lock") or {}).get("policy", ""),
         "输出落点": os.path.join(MEM, "中期忆层.jsonl"),
         "规约sha256": sha_file(charter),
         "锚链版数": len(rows),
@@ -133,16 +134,30 @@ def archive(lock, results, enabled):
         print("  中期忆层：--no-archive，本次不写")
         return
     os.makedirs(MEM, exist_ok=True)
-    rec = {
-        "at": now(),
+    body = {
         "规则源": lock["规则源"],
         "规约sha256": lock["规约sha256"],
         "勘比": [{"端": n, "通过": ok, "退出码": c} for n, ok, c in results],
         "结论": "通过归档" if all(x[1] for x in results) else "不合格未归档",
     }
+    # 幂等键：内容决定，不含时间戳。同一批事实重跑 → 同一键 → 不重复沉淀。
+    keys = json.dumps(body, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    idem = hashlib.sha256(keys.encode("utf-8")).hexdigest()
+    seen = set()
+    if os.path.exists(MEM_LOG):
+        for line in open(MEM_LOG, encoding="utf-8"):
+            if line.strip():
+                try:
+                    seen.add(json.loads(line).get("幂等键", ""))
+                except Exception:
+                    pass
+    if idem in seen:
+        print(f"  中期忆层：幂等键 {idem[:12]} 已存在，跳过（不重复堆积）")
+        return
+    rec = {"幂等键": idem, "at": now(), **body}
     with open(MEM_LOG, "a", encoding="utf-8") as f:
         f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-    print(f"  中期忆层：已记 1 条 → {MEM_LOG}")
+    print(f"  中期忆层：已记 1 条（幂等键 {idem[:12]}）→ {MEM_LOG}")
 
 
 def main():
