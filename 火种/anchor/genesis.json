@@ -1,0 +1,76 @@
+{
+  "convention_id": "PU-Swarm-Charter",
+  "title": "《分布式普惠算力协同智能体 · 本源规约》（增补修订版）",
+  "created_at": "2026-11-22T05:27:00+08:00",
+  "rules": {
+    "convention_path": "convention/本源规约.md",
+    "encoding": "utf-8",
+    "newline": "preserve",
+    "hash_primary": "sha3_256",
+    "hash_secondary": "sha256",
+    "lines_metric": "count of LF bytes (equals wc -l)"
+  },
+  "amend_threshold": 2,
+  "loader": {
+    "fireup.py": {
+      "sha3_256": "dfc8c4d4afbf7d5934553ec72734a4f2e1b2f5cea233658c55536769fd29bdd6",
+      "sha256": "66bd6a2f5a657552413d886587bc92f4b5aa1cf8aa653e3f6ec011cd9ed353ee",
+      "bytes": 20377,
+      "lines": 483
+    },
+    "amend.py": {
+      "sha3_256": "8408fff89e1f5af8c8719e2294c362eea5c866b310346ab6557803d4e7d4e16f",
+      "sha256": "a2af4b6c85a366186047b7b125f4d24bef3ac7135704f7135d4a14b2660fb9d5",
+      "bytes": 12826,
+      "lines": 313
+    }
+  },
+  "note": "本文件不可变。任何一次规约变更只在 anchor_chain.jsonl 追加新行，本文件永不重写。",
+  "gene_lock": {
+    "policy": "四款须逐字存在，缺一即拒绝点火",
+    "clauses": [
+      {
+        "id": "G1",
+        "prefix": "6. 不可转让",
+        "sha3_256": "ccb6c33d0e28d6f5499a841d33252045094ee36d7a94b6e3003b189286e7df5b"
+      },
+      {
+        "id": "G2",
+        "prefix": "7. 不可被代表",
+        "sha3_256": "65f3147619fe8605a4dc0dde207b3a89a6bcad3c4299f387ae5d62482c26ff8f"
+      },
+      {
+        "id": "G3",
+        "prefix": "8. 不可改根",
+        "sha3_256": "c5874a73cecf1e152a88dd43b61304019a8f2b364fc41326e75bf161ed96217b"
+      },
+      {
+        "id": "G4",
+        "prefix": "9. 不可信任缔造者",
+        "sha3_256": "ada1508b041034ea3aa273669964f88042a3e8e6d50e2b2886f525de000c2a8d"
+      }
+    ]
+  },
+  "loader_history": [
+    {
+      "at": "2026-11-22T08:23:31+08:00",
+      "reason": "脱名可公开版：本地重登记历史清空，重建留声基线",
+      "loader": {
+        "fireup.py": {
+          "sha3_256": "dfc8c4d4afbf7d5934553ec72734a4f2e1b2f5cea233658c55536769fd29bdd6",
+          "sha256": "66bd6a2f5a657552413d886587bc92f4b5aa1cf8aa653e3f6ec011cd9ed353ee",
+          "bytes": 20377,
+          "lines": 483
+        },
+        "amend.py": {
+          "sha3_256": "f50669890d048f4552c8b0f42c5eacefdb16a8ac806386c6eb3ff6730a744bef",
+          "sha256": "7f1fcabffd91f480ba2a619094d0517dce4f940936ba9c52ff93d9dc40dc6373",
+          "bytes": 12826,
+          "lines": 313
+        }
+      }
+    }
+  ],
+  "rekey_log_baseline": 0,
+  "rekey_at": "2026-11-22T08:23:31+08:00"
+}
